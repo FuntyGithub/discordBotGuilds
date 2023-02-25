@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bot guilds</title>
+    <meta name="description" content="Check the guilds your bot is on!">
+    <meta name="author" content="Funty">
+    
+    <link rel="stylesheet" type="text/css" href="./src/style.css">
+    <script src="./src/script.js"></script>
+</head>
+
+<body>
+    <h1 class="headline">Bot guilds</h1>
+    <p class="description">Check the guilds your bot is on!</p>
+    <p class="description">Enter your bot's token below:</p>
+    <form id="tokenForm" onsubmit="refreshGuilds(); return false;">
+        <input class="description" type="text" id="token" placeholder="Bot token" required>
+        <input class="description" type="submit" value="Submit">
+    </form>
+    <p class="description">Your bot is on the following guilds:</p>
+    <div id="guilds"></div>
+
+</body>
+
+</html>

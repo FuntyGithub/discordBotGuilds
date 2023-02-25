@@ -1,0 +1,71 @@
+body {
+    background-color: #424242;
+    font-family: Roboto, sans-serif;
+    color: #eeeeee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0px;
+}
+
+.headline {
+    font-size: 50px;
+    margin-top: 50px;
+    margin-bottom: 0px;
+}
+
+.description {
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#guilds {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.guild {
+    background-color: #616161;
+    padding: 10px;
+    border-radius: 10px;
+    width: 300px;
+    height: 300px;
+    box-shadow: 0px 0px 10px 0px #000000;
+    overflow-y: auto;
+}
+
+.guild img {
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0px 0px 10px 0px #000000;
+    
+}
+
+.guild h2 {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.guild p {
+    font-size: 15px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.value {
+    font-family: 'Roboto Mono', monospace;
+    background-color: #424242;
+    color: #eeeeee;
+}
+
+

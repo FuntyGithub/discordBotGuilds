@@ -11,13 +11,28 @@
 
 <body>
     <h1 class="headline">Bot guilds</h1>
-    <p class="description">Check the guilds your bot is on!</p>
-    <p class="description">Enter your bot's token below:</p>
+    <span class="description">Check the guilds your bot is in!</span>
+    <span class="description">Enter your bot's token below:</span>
     <form id="tokenForm" onsubmit="refreshGuilds(); return false;">
         <input class="description" type="text" id="token" placeholder="Bot token" required>
         <input class="description" type="submit" value="Submit">
     </form>
-    <p class="description">Your bot is on the following guilds:</p>
+    <br>
+    <div id="sortBtns">
+        <span class="description">You can sort them:</span>
+        <div>
+            <span class="description">By name: </span> 
+            <button class="description" onclick="sortGuilds('nameAsc')">A-Z</button> 
+            <button class="description" onclick="sortGuilds('nameDesc')">Z-A</button>
+        </div>
+        <div>
+            <span class="description">By ID: </span> 
+            <button class="description" onclick="sortGuilds('idAsc')">Lowest</button> 
+            <button class="description" onclick="sortGuilds('idDesc')">Highest</button>
+        </div>
+    </div>
+
+    <span class="description">Your bot is on the following guilds:</span>
     <div id="guilds"></div>
 
 </body>

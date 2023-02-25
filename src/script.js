@@ -21,7 +21,7 @@ async function refreshGuilds() {
         });
 
         
-        console.log(guilds);
+        // console.log(guilds);
         if (guilds == false) return false;
         
         for (let i = 0; i < guilds.length; i++) {
@@ -118,6 +118,43 @@ async function addGuild(guild) {
     parent.appendChild(guildDiv);
 
 }
+
+function sortGuilds(type) {
+
+    let guilds = document.getElementById("guilds");
+    let guildsArray = Array.from(guilds.children);
+    guilds.innerHTML = "";
+
+    switch (type) {
+        case "nameAsc":
+            guildsArray.sort((a, b) => {
+                return a.children[1].children[0].children[0].value.localeCompare(b.children[1].children[0].children[0].value);
+            });
+            break;
+        case "nameDesc":
+            guildsArray.sort((a, b) => {
+                return b.children[1].children[0].children[0].value.localeCompare(a.children[1].children[0].children[0].value);
+            });
+            break;
+        case "idAsc":
+            guildsArray.sort((a, b) => {
+                return a.children[1].children[1].children[0].value.localeCompare(b.children[1].children[1].children[0].value);
+            });
+            break;
+        case "idDesc":
+            guildsArray.sort((a, b) => {
+                return b.children[1].children[1].children[0].value.localeCompare(a.children[1].children[1].children[0].value);
+            });
+    }
+
+    for (let i = 0; i < guildsArray.length; i++) {
+        const guild = guildsArray[i];
+        guilds.appendChild(guild);
+    }
+
+}
+
+
 
 function encodeHTML(str) {
     return str.replace(/[\u00A0-\u9999<>\&]/gim, function(i) {

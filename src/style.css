@@ -21,6 +21,13 @@ body {
     margin-bottom: 5px;
 }
 
+#sortBtns {
+    background-color: #616161;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px #000000;
+}
+
 #guilds {
     display: flex;
     flex-direction: row;
